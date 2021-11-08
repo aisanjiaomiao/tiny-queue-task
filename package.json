@@ -1,0 +1,40 @@
+{
+  "name": "tiny-queue-task",
+  "description": "",
+  "version": "0.0.1",
+  "author": {
+    "name": "aisanjiaomiao",
+    "email": "a15239840166@outlook.com"
+  },
+  "scripts": {
+    "normal_demo": "node ./example/normal_demo.js",
+    "async_demo": "node ./example/async_demo.js",
+    "retry_demo": "node ./example/retry_demo.js",
+    "espruino_demo": "node ./example/espruino_demo.js"
+  },
+  "contributors": [
+    {
+      "name": "aisanjiaomiao",
+      "email": "a15239840166@outlook.com"
+    }
+  ],
+  "main": "index.js",
+  "dependencies": {},
+  "keywords": [
+    "queue",
+    "queue-task",
+    "ESP32",
+    "ESP8266",
+    "espruino"
+  ],
+  "repository": {
+    "type": "tiny-queue-task",
+    "url": "https://github.com/aisanjiaomiao/tiny-queue-task"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {}
+}
