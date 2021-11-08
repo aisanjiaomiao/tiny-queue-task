@@ -1,8 +1,6 @@
 # tiny-queue-task
 
-<!-- [![Build Status](https://travis-ci.org/thinkjs/think-qs.svg?branch=master)](https://travis-ci.org/thinkjs/think-qs)
-[![Coverage Status](https://coveralls.io/repos/github/thinkjs/think-qs/badge.svg)](https://coveralls.io/github/thinkjs/think-qs)
-[![npm](https://img.shields.io/npm/v/think-qs.svg)](https://www.npmjs.com/package/think-qs) -->
+[![npm](https://img.shields.io/npm/v/tiny-queue-task.svg)](https://www.npmjs.com/package/tiny-queue-task) 
 
 This library can be used in the **NodeJs**, **Browser** and **Espruino** , but platform need support `Promise` or `async/await` only.
 
