@@ -22,6 +22,7 @@
   "main": "index.js",
   "dependencies": {},
   "keywords": [
+    "promise",
     "queue",
     "queue-task",
     "ESP32",
