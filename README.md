@@ -47,10 +47,7 @@ This library support follow options:
 - `retry`: A number set task retry count ( Default: 0 )
 
 ## Methods
-
-### `q.init()`
-
-reset internal parameters
+ 
 
 ### `q.run([array])`
 
@@ -60,7 +57,7 @@ if `array` is defined, reset original array value and run tasks
 
 ### `q.rerun()`
 
-call `q.init()` and `q.run([array])`
+reset internal parameters and run
 
 ## example
 
