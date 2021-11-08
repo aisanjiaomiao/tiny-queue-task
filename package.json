@@ -10,7 +10,8 @@
     "normal_demo": "node ./example/normal_demo.js",
     "async_demo": "node ./example/async_demo.js",
     "retry_demo": "node ./example/retry_demo.js",
-    "espruino_demo": "node ./example/espruino_demo.js"
+    "espruino_demo": "node ./example/espruino_demo.js",
+    "promises_demo": "node ./example/promises_demo.js"
   },
   "contributors": [
     {

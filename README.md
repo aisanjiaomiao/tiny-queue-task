@@ -41,8 +41,8 @@ q.run();
 
 This library support follow options:
 
-- `process`: A function that will be called when a process
-- `perror`: A function that will be called when on error
+- `process`: A function that will be called when a process ( Callback(cursorValue, cursorIndex, originalArray) )
+- `perror`: A function that will be called when on error ( Callback(Error, tryCount, cursorValue, cursorIndex, originalArray) )
 - `limit`: A number set task max length ( Default: 1 )
 - `retry`: A number set task retry count ( Default: 0 )
 
@@ -118,7 +118,7 @@ q.run();
 ### async function :
 
 ```js
-new QueueTask(rows, {
+new QueueTask(array, {
   limit: 5,
   async process(val, index, arr) {
     let t = parseInt(Math.random() * 1000) + 400;
@@ -127,4 +127,39 @@ new QueueTask(rows, {
     console.log("end ----", index, ":", val, " wait(ms)", t);
   },
 }).run();
+```
+
+### retry :
+
+```js
+(new QueueTask(array, {
+    limit: 3,
+    retry: 3,//<===
+    async process(val, index, arr) {
+        let t = parseInt(Math.random() * 1000) + 400; 
+        console.log("run ===>", index, ":", val, " wait(ms)", t,);
+        await waitMs(t);
+        throw ("Err ----" + index + ":" + val + " wait(ms):" + t);
+    },
+    perror: function (err, tryCount, val, index, arr) { 
+        console.log(err, tryCount, val, index, arr);
+    }
+})).run();
+```
+
+### PromiseArray
+
+```js
+(new QueueTask(promiseArray, {
+    limit: 5,
+    retry: 3,
+    async process(promise, index, arr) {
+        console.log("run ===>", index, ":", val,);
+        let t = await promise();
+        console.log("end ----", index, ":", val, " wait(ms)", t);
+    },
+    perror: function (err, count, val, index, arr) {
+        console.log("Err index:", index, err, count, val);
+    }
+})).run();
 ```
